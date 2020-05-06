@@ -2,4 +2,13 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 30px;
+  position: relative;
+
+  #id {
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
 }
+
