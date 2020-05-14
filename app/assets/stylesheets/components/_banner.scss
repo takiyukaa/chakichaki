@@ -1,14 +1,22 @@
+
 .banner {
   background-size: cover;
   background-position: center;
   margin-bottom: 80px;
   position: relative;
 
-  #id {
-    height: 40px;
+  #logo-white {
+    height: 240px;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    bottom: 0px;
+    right: 8px;
   }
-}
 
+
+  img {
+    height: 480px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+}
