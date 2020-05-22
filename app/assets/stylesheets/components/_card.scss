@@ -2,5 +2,19 @@
   background-color: white;
   margin: 8px;
   padding: 8px;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
   border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+  img {
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .item-info {
+    padding: 8px
+  }
 }
