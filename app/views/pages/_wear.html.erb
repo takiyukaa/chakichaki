@@ -5,31 +5,28 @@
   </div>
 
   <div class="content">
-    <div class="category-box">
+    <div class="category-name">
+      <p>ACCESSORIES</p>
+    </div>
 
-      <div class="category-name">
-        <p>ACCESSORIES</p>
-      </div>
-
-      <div class="items row">
-        <% @items.each do |item| %>
-          <div class="col-12 col-sm-6 col-lg-4">
-
-            <%= link_to "https://chakichakijp.thebase.in/items/#{item.number}" do  %>
-              <div class="wear-item-card">
-                <% if item.photo.attached? %>
-                  <%= cl_image_tag item.photo.key, alt: item.name, crop: "fill"%>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+    <div class="items row">
+      <% @items.each do |item| %>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <%= link_to "https://chakichakijp.thebase.in/items/#{item.number}" do  %>
+            <div class="wear-item-card">
+              <% if item.photo.attached? %>
+                <%= cl_image_tag item.photo.key, alt: item.name, crop: "fill"%>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
     <div class="category-name">
       <p>KIMONO</p>
     </div>
+
   </div>
 
 </div>
