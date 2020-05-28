@@ -35,6 +35,12 @@
             <p><%= item.number %></p>
             <p><%= item.price %></p>
           </div>
+          <div class="icons d-flex">
+            <%= link_to edit_item_path(item) do  %>
+              <i class="far fa-edit mr-2"></i>
+            <% end %>
+            <i class="far fa-trash-alt"></i>
+          </div>
         </div>
       </div>
     <% end %>

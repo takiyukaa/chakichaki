@@ -1,0 +1,30 @@
+<%= render 'shared/navbar' %>
+
+<div class="container">
+  <div class ="row justify-content-center">
+    <div class="col-xs-12, col-sm-10 col-lg-6">
+      <h1>edit this item</h1>
+
+      <div class="item-card">
+        <% if @item.photo.attached? %>
+          <%= cl_image_tag item.photo.key, alt: item.name, crop: "fill"%>
+        <% end %>
+        <div class="item-info">
+          <p><%= @item.name %></p>
+          <p><%= @item.number %></p>
+          <p><%= @item.price %></p>
+        </div>
+      </div>
+
+      <%= simple_form_for(@item) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :price %>
+        <%= f.input :number %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, "update an item", class: "btn-warning" %>
+      <% end %>
+
+    </div>
+  </div>
+  <%= link_to "back" , items_path, class: "btn btn-light"  %>
+</div>
